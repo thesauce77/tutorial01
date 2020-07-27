@@ -7,6 +7,7 @@ RUN cd bcftools \
 	&& make \
 	&& make install	
 RUN mkdir /data
+WORKDIR /data
 COPY afr-small.vcf /data/afr-small.vcf
 CMD bcftools
 
